@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#132b43" />
+  <meta name="description" content="METALGEST - gestión local de compras, cotizaciones y proveedores para Metalmecanicosfr" />
+  <title>METALGEST | Compras y proveedores</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-icon">M</div><div><strong>METALGEST</strong><small>Metalmecanicosfr</small></div></div>
+      <div class="side-label">GESTIÓN</div>
+      <nav id="nav" aria-label="Menú principal">
+        <button class="navitem active" data-page="dashboard"><span>▦</span> Panel principal</button>
+        <button class="navitem" data-page="suppliers"><span>♧</span> Proveedores</button>
+        <button class="navitem" data-page="materials"><span>▤</span> Materiales</button>
+        <button class="navitem" data-page="projects"><span>▥</span> Obras y proyectos</button>
+        <button class="navitem" data-page="quotes"><span>▧</span> Cotizaciones</button>
+        <button class="navitem" data-page="compare"><span>⇄</span> Comparativo</button>
+        <button class="navitem" data-page="orders"><span>▣</span> Órdenes de compra</button>
+        <button class="navitem" data-page="tracking"><span>◷</span> Seguimiento</button>
+        <button class="navitem" data-page="reports"><span>▥</span> Reportes y respaldo</button>
+      </nav>
+      <div class="sidebar-bottom"><span class="online-dot"></span> Versión local · v1.0<br><small>Los datos se guardan en este navegador</small></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><button id="menuBtn" class="iconbtn menu-btn" aria-label="Abrir menú">☰</button><div class="crumb">METALGEST <span>/</span> <strong id="currentLabel">Panel principal</strong></div><div class="top-actions"><span id="saveStatus">● Guardado local</span><button class="btn btn-light small" id="helpBtn">Ayuda</button></div></header>
+      <main class="main" id="app" tabindex="-1"></main>
+      <footer class="footer">METALGEST 1.0 · Prototipo académico para Metalmecanicosfr · Sin conexión a una base de datos central</footer>
+    </div>
+  </div>
+  <div id="modalRoot"></div><div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
